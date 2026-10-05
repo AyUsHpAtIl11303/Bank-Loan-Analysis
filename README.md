@@ -2,121 +2,292 @@
 
 ### End-to-End Data Analytics & Business Intelligence Project
 
-An end-to-end analytics project focused on analyzing a bank's loan portfolio, understanding borrower behavior, evaluating loan quality, and identifying trends that can support data-driven lending decisions.
+An end-to-end banking analytics project focused on analyzing loan applications, funding performance, borrower characteristics, loan quality, and portfolio trends using **SQL, Excel, Power BI, and Tableau**.
 
-The project combines **SQL, Excel, Power BI, and Tableau** to transform raw loan data into meaningful business insights and interactive dashboards.
+The project transforms raw loan data into interactive dashboards and actionable business insights to support data-driven lending decisions.
 
 ---
 
 ## 📌 Project Overview
 
-Banks need to continuously monitor loan applications, funded amounts, repayment performance, borrower characteristics, and portfolio risk.
+The objective of this project is to analyze a bank's loan portfolio and provide a comprehensive view of:
 
-This project analyzes a bank loan dataset to answer important business questions such as:
+- Loan application performance
+- Funded and received amounts
+- Loan quality and repayment status
+- Borrower characteristics
+- Loan purposes and terms
+- Geographic distribution
+- Interest rate and DTI trends
+- Monthly application trends
 
-- How is loan application volume changing over time?
-- How much money has been funded and received?
-- What proportion of loans are performing vs. non-performing?
-- Which loan purposes generate the highest demand?
-- How do interest rates and DTI vary across borrowers?
-- Which states and customer segments contribute most to the portfolio?
-- What factors are associated with higher loan risk?
+**Analysis Workflow:**
 
-The analysis follows a complete workflow:
-
-**Raw Data → Data Preparation → SQL Analysis → KPI Development → Excel Validation → Power BI / Tableau Dashboards → Business Insights**
-
----
-
-## 🎯 Business Objectives
-
-The main objectives of this project are to:
-
-- Analyze overall loan portfolio performance
-- Track loan applications and funding trends
-- Evaluate Good Loan vs. Bad Loan performance
-- Analyze borrower characteristics and loan purposes
-- Monitor key financial KPIs
-- Identify patterns in loan repayment and risk
-- Compare trends across states, loan terms, and customer segments
-- Build interactive dashboards for business decision-making
+`Raw Data → Data Analysis → SQL Queries → KPI Development → Dashboard Development → Business Insights`
 
 ---
 
-## 🗂️ Dataset
+## 🎯 Business Problem
 
-The project uses a financial loan dataset containing information about loan applications, borrowers, loan characteristics, and repayment performance.
+Traditional loan reporting can make it difficult to understand lending operations, borrower behavior, and loan performance from a single view.
 
-### Key fields include:
+This project addresses the problem by developing interconnected analytical dashboards that provide dynamic insights into lending operations, borrower demographics, financial metrics, and loan performance.
 
-| Field | Description |
-|---|---|
-| Loan ID | Unique identifier for each loan |
-| Address State | Borrower's state |
-| Employee Length | Length of employment |
-| Employee Title | Borrower's employment title |
-| Grade | Loan risk grade |
-| Sub Grade | Detailed risk classification |
-| Home Ownership | Borrower's housing status |
-| Issue Date | Loan origination date |
-| Loan Status | Current loan performance status |
-| Purpose | Reason for taking the loan |
-| Term | Loan duration |
-| Annual Income | Borrower's annual income |
-| DTI | Debt-to-Income ratio |
-| Installment | Monthly loan payment |
-| Interest Rate | Annual interest rate |
-| Loan Amount | Principal loan amount |
+The dashboards are designed to help decision-makers evaluate portfolio performance and identify important lending trends.
 
 ---
 
-# 🔎 Analysis Workflow
+## 📊 Key Performance Indicators
 
-## 1️⃣ Data Preparation
+| KPI | Value |
+|---|---:|
+| Total Loan Applications | 38.6K |
+| Total Funded Amount | $435.8M |
+| Total Amount Received | $473.1M |
+| Average Interest Rate | 12.05% |
+| Average DTI | 13.33% |
+| Good Loan Applications | 33.2K |
+| Bad Loan Applications | 5.3K |
+| Good Loan Issued | 86.2% |
+| Bad Loan Issued | 13.8% |
 
-The raw loan dataset was prepared for analysis by:
-
-- Reviewing data structure and field definitions
-- Validating data quality
-- Preparing fields for analysis
-- Standardizing relevant attributes
-- Creating categories required for portfolio analysis
-
-Excel was also used for preliminary validation and analysis.
+The dashboard also tracks **Month-to-Date (MTD)** and **Month-over-Month (MoM)** performance for major KPIs.
 
 ---
 
-## 2️⃣ SQL Analysis
+## 💰 Funding & Collection Performance
 
-SQL Server was used to perform analytical queries and calculate business KPIs.
+- **$435.8M** in total funded amount
+- **$473.1M** in total amount received
+- **$54.0M** MTD funded amount
+- **$58.1M** MTD received amount
+- **13.0%** MoM increase in funded amount
+- **15.8%** MoM increase in received amount
 
-The analysis includes:
+---
+
+## 🟢 Good Loan vs 🔴 Bad Loan Analysis
+
+### 🟢 Good Loans
+
+- Good Loan Applications: **33.2K**
+- Good Loan Issued: **86.2%**
+- Good Loan Funded Amount: **$370.2M**
+- Good Loan Received Amount: **$435.8M**
+
+### 🔴 Bad Loans
+
+- Bad Loan Applications: **5.3K**
+- Bad Loan Issued: **13.8%**
+- Bad Loan Funded Amount: **$65.5M**
+- Bad Loan Received Amount: **$37.3M**
+
+---
+
+## 📈 Loan Status Analysis
+
+| Loan Status | Applications | Funded Amount | Amount Received | Avg. Interest | Avg. DTI |
+|---|---:|---:|---:|---:|---:|
+| Fully Paid | 32,145 | $351.36M | $411.59M | 11.64% | 13.17% |
+| Charged Off | 5,333 | $65.53M | $37.28M | 13.88% | 14.00% |
+| Current | 1,098 | $18.87M | $24.20M | 15.10% | 14.72% |
+| **Total** | **38,576** | **$435.76M** | **$473.07M** | **12.05%** | **13.33%** |
+
+---
+
+## 📅 Loan Application Trends
+
+Monthly loan applications increased from approximately **2.3K in January** to **4.3K in December**, indicating stronger application activity toward the end of the year.
+
+---
+
+## 🗺️ Geographic Analysis
+
+The dashboard provides state-level analysis of loan applications using an interactive geographic visualization.
+
+This helps identify:
+
+- States with higher loan activity
+- Regional lending patterns
+- Geographic concentration
+- State-level application trends
+
+---
+
+## ⏳ Loan Term Analysis
+
+| Loan Term | Share |
+|---|---:|
+| 36 Months | 73.2% |
+| 60 Months | 26.8% |
+
+The **36-month term** represents the majority of loan applications.
+
+---
+
+## 🎯 Loan Purpose Analysis
+
+The project analyzes applications across multiple purposes:
+
+- Debt Consolidation
+- Credit Card
+- Other
+- Home Improvement
+- Major Purchase
+- Small Business
+- Car
+- Wedding
+- Medical
+
+**Debt consolidation** is the largest loan purpose, with approximately **18K applications**.
+
+---
+
+## 🏠 Home Ownership Analysis
+
+Loan applications are analyzed across:
+
+- RENT
+- MORTGAGE
+- OWN
+
+The dashboard shows approximately **18K applications from renters** and **17K from mortgage holders**.
+
+---
+
+## 📊 Dashboard
+
+### 1. Executive Summary
+
+Provides a high-level view of:
+
+- Total Loan Applications
+- Total Funded Amount
+- Total Amount Received
+- Average Interest Rate
+- Average DTI
+- Good vs Bad Loan analysis
+- Loan status performance
+
+![Executive Summary](assets/summary.png)
+
+---
+
+### 2. Portfolio Overview
+
+Provides interactive analysis of:
+
+- Monthly loan application trends
+- State-level applications
+- Loan term distribution
+- Employee length
+- Loan purpose
+- Home ownership
+
+![Portfolio Overview](assets/overview.png)
+
+---
+
+### 3. Loan Details
+
+Provides granular loan-level information including:
+
+- Loan ID
+- Loan Purpose
+- Home Ownership
+- Grade
+- Sub Grade
+- Issued Date
+- Funded Amount
+- Interest Rate
+- Installment
+- Received Amount
+
+![Loan Details](assets/details.png)
+
+---
+
+## 🛠️ Tools & Technologies
+
+### Data Analysis
+- SQL
+- Microsoft Excel
+
+### Business Intelligence
+- Microsoft Power BI
+- Tableau
+
+### Data Visualization
+- Power BI
+- Tableau
+- Excel
+
+### Version Control
+- Git
+- GitHub
+
+---
+
+## 🔍 SQL Analysis
+
+SQL was used to calculate and analyze:
 
 - Total loan applications
-- Monthly loan application trends
 - Total funded amount
 - Total amount received
 - Average interest rate
 - Average DTI
-- Loan status analysis
-- Good vs. Bad loan analysis
-- State-level analysis
-- Loan purpose analysis
-- Loan term analysis
-- Employment length analysis
-- Home ownership analysis
+- Loan status
+- Good vs Bad loans
+- Monthly trends
+- Loan purpose
+- Loan term
+- Employment length
+- Home ownership
+- Geographic distribution
 
-### Example business questions addressed using SQL:
+---
 
-```sql
--- Total Loan Applications
-SELECT COUNT(*) AS Total_Loan_Applications
-FROM financial_loan;
+## Overview of Dashboard
+<img width="2075" height="1200" alt="overview" src="https://github.com/user-attachments/assets/7fdc3693-cfab-41da-8274-daee8d559ac8" />
 
--- Total Funded Amount
-SELECT SUM(loan_amount) AS Total_Funded_Amount
-FROM financial_loan;
+<img width="2075" height="1200" alt="details" src="https://github.com/user-attachments/assets/0b9e65ef-5983-449d-b5ce-0799222b3137" 
 
--- Average Interest Rate
-SELECT AVG(int_rate) AS Average_Interest_Rate
-FROM financial_loan;
+<img width="2075" height="1200" alt="summary" src="https://github.com/user-attachments/assets/f2dbb7fc-b820-42f2-8810-efce0bcccb8e" />
+
+
+
+
+## 📁 Repository Structure
+
+```text
+Bank-Loan-Analysis/
+│
+├── assets/
+│   ├── summary.png
+│   ├── overview.png
+│   └── details.png
+│
+├── data/
+│   └── financial_loan.csv
+│
+├── sql/
+│   ├── loan_queries.sql
+│   └── bankloan_sqlquery.pdf
+│
+├── excel/
+│   └── loan_data_analysis.xlsx
+│
+├── powerbi/
+│   └── bank_loan_data_insights.pbix
+│
+├── tableau/
+│   └── bank_loan_data_viz.twbx
+│
+├── documentation/
+│   ├── analytical_BI_report.pdf
+│   ├── domain_insights.docx
+│   ├── loan_data_terms.docx
+│   └── problem_statement.pdf
+│
+└── README.md
